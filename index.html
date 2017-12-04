@@ -14,7 +14,7 @@
                 menu: '#menu',
                 lockAnchors: false,
                 anchors:['firstPage', 'secondPage'],
-                navigation: false,
+                navigation: true,
                 navigationPosition: 'right',
                 navigationTooltips: ['firstSlide', 'secondSlide'],
                 showActiveTooltip: false,
@@ -89,14 +89,36 @@
 </head>
 <body>
 <div id="fullpage">
-    <div class="section" id="landing_section">Section 1</div>
+    <div class="section" id="landing_section">
+        <div class ="rain_bg"></div>
+        <div class="content_container">
+            <div class="title">
+                <h1>
+                    JNW Films
+                </h1>
+                <hr/>
+                <p>
+                    "Where talent meets ability"
+                </p>
+            </div>
+            <div class="description">
+                <h2>
+                    Development, Production, Literary Management.
+                </h2>
+                <p>
+                    With over 10 years experience specializing in creative content development,
+                    production, and distribution for Film, Televison, VR, Comic Book, Video Game, and New Media.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="section" id="television_section">
         <!--<div class="slide">Section 2 Slide 1</div>-->
         <!--<div class="slide">Section 2 Slide 2</div>-->
         <!--<div class="slide">Section 2 Slide 3</div>-->
     </div>
-    <div class="section" id="film_section">Section 3</div>
-    <div class="section" id="about_section">Section4</div>
+    <div class="section" id="film_section">Televsion</div>
+    <div class="section" id="about_section">Film</div>
 
 </div>
 </body>
