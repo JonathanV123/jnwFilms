@@ -1,0 +1,36 @@
+#landing_section{
+    background-image: url("../../assets/images/pexels-photo-672914.jpeg");
+    background-size: cover;
+}
+#television_section{
+    background-image: url("../../assets/images/tv_bg.jpeg");
+    background-size: cover;
+}
+#film_section{
+    background-image: url("../../assets/images/film_bg.jpeg");
+    background-size: cover;
+}
+#about_section{
+    background-image: url("../../assets/images/about_bg.jpeg");
+    background-size: cover;
+}
+
+.fullpage-wrapper {
+    width: 100%!important;
+    transform: none!important;
+}
+
+.fp-section {
+    width: 100%!important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1.2s ease-in-out;
+}
+
+.fp-section.active {
+    visibility: visible;
+    opacity: 1;
+}

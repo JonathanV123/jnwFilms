@@ -1,0 +1,22 @@
+{
+  "name": "jnw",
+  "version": "1.0.0",
+  "description": "Film Website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanV123/jnwFilms.git"
+  },
+  "author": "JV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanV123/jnwFilms/issues"
+  },
+  "homepage": "https://github.com/JonathanV123/jnwFilms#readme",
+  "dependencies": {
+    "fullpage.js": "^2.9.5"
+  }
+}
