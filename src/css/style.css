@@ -16,19 +16,31 @@
     background-image: url("../../assets/images/film_bg.jpeg");
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../../assets/images/film_bg.jpeg");        
     background-size: cover;
+    padding-top: 0 !important; 
+}
+#film_section_cont {
+    background-image: url("../../assets/images/film_bg.jpeg");
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../../assets/images/film_bg.jpeg");        
+    background-size: cover;
+    padding-top: 0 !important; 
 }
 
 #about_section {
     background-image: url("../../assets/images/about_bg.jpeg");
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../../assets/images/about_bg.jpeg");            
     background-size: cover;
+    padding-top: 0 !important; 
 }
 
-.rain_bg {
+#rain_bg {
     background-image: url("../../assets/images/bg_rain.png");
     background-repeat: repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 101;
     background-size: cover;
-    animation: animate_rain .75s infinite linear;
+    animation: animate_rain 1.60s infinite linear;
 }
 .television_project{
     width: 50%;
@@ -58,6 +70,10 @@
     text-align: center;
     flex-direction: column;
 }
+.film_container{
+    color: white;
+    text-align: center;
+}
 
 .fullpage-wrapper {
     width: 100% !important;
@@ -83,6 +99,9 @@
     background: white;
 }
 
+#fp-nav ul li .fp-tooltip{
+    font-family: 'Roboto Condensed', sans-serif;    
+}
 
 #fp-nav{
     position: absolute;
@@ -96,3 +115,47 @@
     right: auto;
 }
 
+.film_project{
+    width: 300px;
+    display: inline-block;
+    margin: 15px;
+    height: 250px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.film_project > p{
+    font-size: 1.2em;
+    text-align: left;
+    font-family: 'Old Standard TT', serif;
+}
+
+.film_title{
+    margin-bottom:20px;
+    font-family: 'Roboto Condensed', sans-serif;    
+}
+
+.title_container{
+    height: 30%;
+}
+#title_container_landing > h1{
+    font-size: 8em;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+}
+
+.title_container_project > h1{
+    font-size: 2.5em;
+    font-family: 'Roboto Condensed', sans-serif;    
+    color: white;
+    text-align: center;
+}
+
+.description > h2{
+    font-size: 2.5em;
+}
+
+.description > p{
+    font-size: 1.3em;
+}

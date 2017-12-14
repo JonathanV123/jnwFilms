@@ -3,12 +3,12 @@ $(document).ready(function () {
         //Navigation
         menu: '#menu',
         lockAnchors: false,
-        anchors: ['firstPage', 'secondPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdpage'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
-        showActiveTooltip: false,
-        slidesNavigation: false,
+        navigationTooltips: ['Scroll Down / Swipe Down', 'Film', 'Film cont..', 'Television', 'Contact Me'],
+        showActiveTooltip: true,
+        slidesNavigation: true,
         slidesNavPosition: 'bottom',
 
         //Scrolling
@@ -74,4 +74,5 @@ $(document).ready(function () {
     });
     // Fade out load screen
     $("#loadScreen").fadeOut(6600);
+    $("#rain_bg").delay(4500).fadeOut(5600);
 });
