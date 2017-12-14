@@ -7,94 +7,19 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./node_modules/fullpage.js/vendors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="./node_modules/fullpage.js/dist/jquery.fullPage.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                //Navigation
-                menu: '#menu',
-                lockAnchors: false,
-                anchors:['firstPage', 'secondPage'],
-                navigation: true,
-                navigationPosition: 'right',
-                navigationTooltips: ['firstSlide', 'secondSlide'],
-                showActiveTooltip: false,
-                slidesNavigation: false,
-                slidesNavPosition: 'bottom',
-
-                //Scrolling
-                css3: true,
-                scrollingSpeed: 700,
-                autoScrolling: true,
-                fitToSection: true,
-                fitToSectionDelay: 1000,
-                scrollBar: false,
-                easing: 'easeInOutCubic',
-                easingcss3: 'ease',
-                loopBottom: false,
-                loopTop: false,
-                loopHorizontal: true,
-                continuousVertical: false,
-                continuousHorizontal: false,
-                scrollHorizontally: false,
-                interlockedSlides: false,
-                dragAndMove: false,
-                offsetSections: false,
-                resetSliders: false,
-                fadingEffect: false,
-                normalScrollElements: '#element1, .element2',
-                scrollOverflow: false,
-                scrollOverflowReset: false,
-                scrollOverflowOptions: null,
-                touchSensitivity: 15,
-                normalScrollElementTouchThreshold: 5,
-                bigSectionsDestination: null,
-
-                //Accessibility
-                keyboardScrolling: true,
-                animateAnchor: true,
-                recordHistory: true,
-
-                //Design
-                controlArrows: true,
-                verticalCentered: true,
-                sectionsColor : ['#ccc', '#fff'],
-                paddingTop: '3em',
-                paddingBottom: '10px',
-                fixedElements: '#header, .footer',
-                responsiveWidth: 0,
-                responsiveHeight: 0,
-                responsiveSlides: false,
-                parallax: false,
-                parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-
-                //Custom selectors
-                sectionSelector: '.section',
-                slideSelector: '.slide',
-
-                lazyLoading: true,
-
-                //events
-                onLeave: function(index, nextIndex, direction){},
-                afterLoad: function(anchorLink, index){},
-                afterRender: function(){},
-                afterResize: function(){},
-                afterResponsive: function(isResponsive){},
-                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-                onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-            });
-        });
-    </script>
+    <script type="text/javascript" src="./src/js/app.js"> </script>
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <!--<script src="./src/js/app.js"></script>-->
 </head>
 <body>
+<div id="loadScreen"></div>
 <div id="fullpage">
     <div class="section" id="landing_section">
         <div class ="rain_bg"></div>
         <div class="content_container">
             <div class="title">
                 <h1>
-                    JNW Films
+                    Lorem Ipsum Lorem Ipsum
                 </h1>
                 <hr/>
                 <p>
@@ -113,12 +38,107 @@
         </div>
     </div>
     <div class="section" id="television_section">
-        <!--<div class="slide">Section 2 Slide 1</div>-->
-        <!--<div class="slide">Section 2 Slide 2</div>-->
-        <!--<div class="slide">Section 2 Slide 3</div>-->
+        <div class="content_container">
+            <div class="title">
+                <h1>
+                    Televsion Projects In Development
+                </h1>
+                <hr/>
+            </div>
+            <div class="television_project">
+                <h2>
+                    ZARDONIA: (1HR Fantasy Adventure – Pilot & Episode Two)
+                </h2>
+                <p>
+                    The vile Warlock Vondrone returns to Zardonia and releases deadly monsters that have been since exiled to the Dungeons; 
+                    now King Dakkar will have to rely on the aid of the most gifted spell casters and warriors in the Land to band together 
+                    and stop this vile Warlock once and for all.
+                </p>
+            </div>
+            <div class="television_project">
+                <h2>
+                    MORNINGSTAR: (1HR Supernatural Drama with comedic undertones)
+                </h2>
+                <p>
+                    –Pilot and Season One Bible– Beyond the tree-lined streets, smiling neighbors, and town square parades of Morningstar, 
+                    there is a pitch-black underbelly where supernatural forces battle for control of the town, as those forces will dictate the fate of the world. 
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="section" id="film_section">Televsion</div>
-    <div class="section" id="about_section">Film</div>
+    <div class="section" id="film_section">
+        <div class="content_container">
+            <div class="title">
+                <h1>
+                    Televsion Projects In Development
+                </h1>
+                <hr/>
+            </div>
+            <div class="film_project">
+                <h2>
+                    ZARDONIA: (1HR Fantasy Adventure – Pilot & Episode Two)
+                </h2>
+                <p>
+                    The vile Warlock Vondrone returns to Zardonia and releases deadly monsters that have been since exiled to the Dungeons; 
+                    now King Dakkar will have to rely on the aid of the most gifted spell casters and warriors in the Land to band together 
+                    and stop this vile Warlock once and for all.
+                </p>
+            </div>
+            <div class="film_project">
+                <h2>
+                    MORNINGSTAR: (1HR Supernatural Drama with comedic undertones)
+                </h2>
+                <p>
+                    –Pilot and Season One Bible– Beyond the tree-lined streets, smiling neighbors, and town square parades of Morningstar, 
+                    there is a pitch-black underbelly where supernatural forces battle for control of the town, as those forces will dictate the fate of the world. 
+                </p>
+            </div>
+            <div class="film_project">
+                <h2>
+                    MORNINGSTAR: (1HR Supernatural Drama with comedic undertones)
+                </h2>
+                <p>
+                    –Pilot and Season One Bible– Beyond the tree-lined streets, smiling neighbors, and town square parades of Morningstar, 
+                    there is a pitch-black underbelly where supernatural forces battle for control of the town, as those forces will dictate the fate of the world. 
+                </p>
+            </div>
+            <div class="film_project">
+                <h2>
+                    MORNINGSTAR: (1HR Supernatural Drama with comedic undertones)
+                </h2>
+                <p>
+                    –Pilot and Season One Bible– Beyond the tree-lined streets, smiling neighbors, and town square parades of Morningstar, 
+                    there is a pitch-black underbelly where supernatural forces battle for control of the town, as those forces will dictate the fate of the world. 
+                </p>
+            </div>
+            <div class="film_project">
+                <h2>
+                    MORNINGSTAR: (1HR Supernatural Drama with comedic undertones)
+                </h2>
+                <p>
+                    –Pilot and Season One Bible– Beyond the tree-lined streets, smiling neighbors, and town square parades of Morningstar, 
+                    there is a pitch-black underbelly where supernatural forces battle for control of the town, as those forces will dictate the fate of the world. 
+                </p>
+            </div>
+            <div class="film_project">
+                <h2>
+                    MORNINGSTAR: (1HR Supernatural Drama with comedic undertones)
+                </h2>
+                <p>
+                    –Pilot and Season One Bible– Beyond the tree-lined streets, smiling neighbors, and town square parades of Morningstar, 
+                    there is a pitch-black underbelly where supernatural forces battle for control of the town, as those forces will dictate the fate of the world. 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="about_section">
+        <div class="section">
+            <div class="slide"> Slide 1 </div>
+            <div class="slide"> Slide 2 </div>
+            <div class="slide"> Slide 3 </div>
+            <div class="slide"> Slide 4 </div>
+        </div>
+    </div>
 
 </div>
 </body>

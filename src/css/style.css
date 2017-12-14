@@ -1,20 +1,26 @@
 #landing_section {
     background-image: url("../../assets/images/pexels-photo-672914.jpeg");
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url("../../assets/images/pexels-photo-672914.jpeg");
     background-size: cover;
+    padding-top: 0 !important;
 }
 
 #television_section {
     background-image: url("../../assets/images/tv_bg.jpeg");
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("../../assets/images/tv_bg.jpeg");    
     background-size: cover;
+    padding-top: 0 !important;    
 }
 
 #film_section {
     background-image: url("../../assets/images/film_bg.jpeg");
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../../assets/images/film_bg.jpeg");        
     background-size: cover;
 }
 
 #about_section {
     background-image: url("../../assets/images/about_bg.jpeg");
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../../assets/images/about_bg.jpeg");            
     background-size: cover;
 }
 
@@ -24,7 +30,17 @@
     background-size: cover;
     animation: animate_rain .75s infinite linear;
 }
-
+.television_project{
+    width: 50%;
+    font-size: 1.3em;
+}
+#loadScreen{
+    position:absolute;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
 @keyframes animate_rain {
     0% {
         background-position: 0 0;
@@ -62,3 +78,21 @@
     visibility: visible;
     opacity: 1;
 }
+
+#fp-nav ul li a span{
+    background: white;
+}
+
+
+#fp-nav{
+    position: absolute;
+    margin-top: 0;
+    bottom: 0;
+    left: 50%;
+    top: auto;
+}
+
+#fp-nav.right{
+    right: auto;
+}
+
