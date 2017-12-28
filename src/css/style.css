@@ -2,50 +2,57 @@
     background-image: url("../../assets/images/pexels-photo-672914.jpeg");
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url("../../assets/images/pexels-photo-672914.jpeg");
     background-size: cover;
-    padding-top: 0 !important;
+    /* padding-top: 0 !important; */
 }
+
+#landing_section p {
+    width: 50%;
+}
+
+#landing_content_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 #television_section {
     background-image: url("../../assets/images/tv_bg.jpeg");
     background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("../../assets/images/tv_bg.jpeg");    
     background-size: cover;
-    padding-top: 0 !important;    
+    /* padding-top: 0 !important;     */
 }
 
 #film_section {
     background-image: url("../../assets/images/film_bg.jpeg");
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../../assets/images/film_bg.jpeg");        
     background-size: cover;
-    padding-top: 0 !important; 
+    /* padding-top: 0 !important;  */
 }
-#film_section_cont {
+
+#film_completed_section {
     background-image: url("../../assets/images/film_bg.jpeg");
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../../assets/images/film_bg.jpeg");        
     background-size: cover;
-    padding-top: 0 !important; 
+    /* padding-top: 0 !important;  */
 }
 
 #about_section {
     background-image: url("../../assets/images/about_bg.jpeg");
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../../assets/images/about_bg.jpeg");            
     background-size: cover;
-    padding-top: 0 !important; 
+    /* padding-top: 0 !important;  */
 }
 
-#rain_bg {
-    background-image: url("../../assets/images/bg_rain.png");
-    background-repeat: repeat;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 101;
-    background-size: cover;
-    animation: animate_rain 1.60s infinite linear;
+.section{
+    text-align: center;
 }
+
 .television_project{
-    width: 50%;
     font-size: 1.3em;
 }
+
 #loadScreen{
     position:absolute;
     background: black;
@@ -53,46 +60,18 @@
     height: 100vh;
     z-index: 101;
 }
-@keyframes animate_rain {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 0 -200%;
-    }
+
+.film_container{
+    text-align: center;
 }
 
-.content_container {
+.film_container_completed{
+    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    text-align: center;
-    flex-direction: column;
-}
-.film_container{
-    color: white;
-    text-align: center;
-}
-
-.fullpage-wrapper {
-    width: 100% !important;
-    transform: none !important;
-}
-
-.fp-section {
-    width: 100% !important;
-    position: absolute;
-    left: 0;
-    top: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 1.2s ease-in-out;
-}
-
-.fp-section.active {
-    visibility: visible;
-    opacity: 1;
+    height: 100vh;
 }
 
 #fp-nav ul li a span{
@@ -103,51 +82,300 @@
     font-family: 'Roboto Condensed', sans-serif;    
 }
 
-#fp-nav{
-    position: absolute;
-    margin-top: 0;
-    bottom: 0;
-    left: 50%;
-    top: auto;
+.fp-tooltip{
+    margin-right: 10px;
 }
 
-#fp-nav.right{
-    right: auto;
+#fp-nav.right {
+    border: 2px solid white;
+    -webkit-animation: nav_pop_in 2s forwards; 
+    -moz-animation: nav_pop_in 2s forwards;
+    animation: nav_pop_in 2s forwards;
+}
+
+#landing_content_container h1{
+    font-size: 8em;
+    color: white;  
+    -webkit-animation: pop_in 1.5s forwards; 
+    -moz-animation: pop_in 1.5s forwards; 
+    animation: pop_in 1.5s forwards;
+}
+
+#landing_content_container h2{
+    -webkit-animation: pop_in 2s forwards; 
+    -moz-animation: pop_in 2s forwards; 
+    animation: pop_in 2s forwards;
+}
+
+#landing_content_container p{
+    color: white;  
+    -webkit-animation: pop_in 2.5s forwards; 
+    -moz-animation: pop_in 2.5s forwards; 
+    animation: pop_in 2.5s forwards;
+    font-family: 'Volkhov', serif;
+}
+
+.flex_center{
+    display: -webkit-inline-flex; 
+    display: inline-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+
+}
+.film_project_completed{
+    width: 350px;
+    margin: 15px;
+    height: 350px;
+    padding: 15px;
+    position: relative;
+    opacity: 0;
+    color: white;
 }
 
 .film_project{
-    width: 300px;
-    display: inline-block;
+    width: 350px;
     margin: 15px;
-    height: 250px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 350px;
+    padding: 15px;
+    position: relative;
+    opacity: 0;
+    color: white;
+}
+
+.film_project h3{
+  margin: 3px 0 3px 0;
+}
+
+#television_container{
+    width: 70%;
+}
+
+
+.fade_in_animation{
+    -webkit-animation: fadein 2s forwards;
+    -moz-animation: fadein 2s forwards; 
+    animation: fadein 2s forwards;
+}
+
+@keyframes nav_pop_in {
+    from { 
+        opacity: 0;
+        -ms-transform:  translateY(-800px);
+        -moz-transform:  translateY(-800px);
+        -webkit-transform:  translateY(-800px);
+        transform: translateY(-800px);
+ 
+    }
+    to   { 
+        opacity: 1; 
+        -ms-transform:  translateY(0);
+        -moz-transform:  translateY(0);
+        -webkit-transform:  translateY(0);
+        transform: translateY(0);
+ 
+    }
+}
+
+@-moz-keyframes nav_pop_in {
+    from { 
+        opacity: 0;
+        -ms-transform:  translateY(-800px);
+        -moz-transform:  translateY(-800px);
+        -webkit-transform:  translateY(-800px);
+        transform: translateY(-800px);
+ 
+    }
+    to   { 
+        opacity: 1; 
+        -ms-transform:  translateY(0);
+        -moz-transform:  translateY(0);
+        -webkit-transform:  translateY(0);
+        transform: translateY(0);
+ 
+    }
+}
+
+
+@-webkit-keyframes nav_pop_in {
+    from { 
+        opacity: 0;
+        -ms-transform:  translateY(-800px);
+        -moz-transform:  translateY(-800px);
+        -webkit-transform:  translateY(-800px);
+        transform: translateY(-800px);
+ 
+    }
+    to   { 
+        opacity: 1; 
+        -ms-transform:  translateY(0);
+        -moz-transform:  translateY(0);
+        -webkit-transform:  translateY(0);
+        transform: translateY(0);
+ 
+    }
+}
+
+@keyframes pop_in {
+    from { 
+        opacity: 0;
+        -ms-transform:  translateX(-800px);
+        -moz-transform:  translateX(-800px);
+        -webkit-transform:  translateX(-800px);
+        transform: translateX(-800px);
+ 
+    }
+    to   { 
+        opacity: 1; 
+        -ms-transform:  translateX(0);
+        -moz-transform:  translateX(0);
+        -webkit-transform:  translateX(0);
+        transform: translateX(0);
+ 
+    }
+}
+
+@-moz-keyframes pop_in {
+    from { 
+        opacity: 0;
+        -ms-transform:  translateY(-800px);
+        -moz-transform:  translateY(-800px);
+        -webkit-transform:  translateY(-800px);
+        transform: translateY(-800px);
+ 
+    }
+    to   { 
+        opacity: 1; 
+        -ms-transform:  translateY(0);
+        -moz-transform:  translateY(0);
+        -webkit-transform:  translateY(0);
+        transform: translateY(0);
+ 
+    }
+}
+
+
+@-webkit-keyframes pop_in {
+    from { 
+        opacity: 0;
+        -ms-transform:  translateY(-800px);
+        -moz-transform:  translateY(-800px);
+        -webkit-transform:  translateY(-800px);
+        transform: translateY(-800px);
+    }
+    to   { 
+        opacity: 1; 
+        -moz-transform:  translateY(0);
+        -ms-transform:  translateY(0);
+        -webkit-transform:  translateY(0);
+        transform: translateY(0);
+ 
+    }
+}
+
+@keyframes fadein {
+    from { 
+        opacity: 0;
+        -ms-transform:  translateY(75px);
+        -moz-transform:  translateY(75px);
+        -webkit-transform:  translateY(75px);
+        transform: translateY(75px);
+ 
+    }
+    to   { 
+        opacity: 1; 
+        -ms-transform:  translateY(0);
+        -moz-transform:  translateY(0);
+        -webkit-transform:  translateY(0);
+        transform: translateY(0);
+ 
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+        -ms-transform:  translateY(75px);
+        -moz-transform:  translateY(75px);
+        -webkit-transform:  translateY(75px);
+        transform: translateY(75px);
+
+    }
+    to   { 
+        opacity: 1; 
+        -ms-transform:  translateY(0);
+        -moz-transform:  translateY(0);
+        -webkit-transform:  translateY(0);
+        transform: translateY(0);
+
+    }
+}
+
+@-webkit-keyframes fadein {
+    from { 
+        opacity: 0;
+        -ms-transform:  translateY(75px);
+        -moz-transform:  translateY(75px);
+        -webkit-transform:  translateY(75px);
+        transform: translateY(75px);
+ 
+    }
+    to  
+     {
+        opacity: 1; 
+        -ms-transform:  translateY(0);
+        -moz-transform:  translateY(0);
+        -webkit-transform:  translateY(0);
+        transform: translateY(0);
+ 
+    }
 }
 
 .film_project > p{
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-align: left;
-    font-family: 'Old Standard TT', serif;
+    font-family: 'Volkhov', serif;
 }
 
 .film_title{
-    margin-bottom:20px;
-    font-family: 'Roboto Condensed', sans-serif;    
+    margin: 0;
+    font-family: 'Archivo Black', sans-serif;
 }
 
 .title_container{
     height: 30%;
 }
-#title_container_landing > h1{
+
+#landing_content_container > h1{
     font-size: 8em;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
     margin: 0;
 }
 
-.title_container_project > h1{
+span:nth-child(1){
+    font-size: 5em;
+    display: block;
+    right: 25%;
+    position: relative;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+span:nth-child(2){
     font-size: 2.5em;
-    font-family: 'Roboto Condensed', sans-serif;    
+    position: relative;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    color: white;
+    right: 15%;
+}
+
+.title{
+    font-size: 2em;
+    font-family: 'Archivo Black', sans-serif;
     color: white;
     text-align: center;
 }
