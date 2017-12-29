@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log($)
     $('#fullpage').fullpage({
         //Navigation
         menu: '#myMenu',
@@ -77,18 +78,17 @@ $(document).ready(function () {
                 let animation_selections = document.querySelectorAll('.completed_section_animations');
                 let animation_class_name = 'animation_trigger_completed_section';
                 animations(animation_selections, animation_class_name)
+                $('#film_project_completed p').addClass('pop_in_bottom');
             }
-
+            else if (index == 2 && direction == 'down') {
+                let animation_selections = document.querySelectorAll('.film_project');
+                let animation_class_name = 'fade_in_animation';
+                animations(animation_selections, animation_class_name)                
+            }
             else if (index == 2 && direction == 'up') {
                 console.log("Going to section 1!");
                 console.log(index);
 
-            }
-            else if (index == 2 && direction == 'down') {
-                console.log("Going to section 3!");
-                console.log(index);
-                var projectDescription = document.querySelectorAll('.film_project');
-                
             }
             else if (index == 3 && direction == 'up') {
                 console.log("Going to section 2!");
@@ -114,7 +114,6 @@ $(document).ready(function () {
             (function (index) {
                 setTimeout(function () {
                     $(elements).addClass(animation_class_name);
-                    console.log(elements);
                 }, index * 200);
             })(index);
         });
