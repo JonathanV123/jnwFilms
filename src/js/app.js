@@ -71,20 +71,12 @@ $(document).ready(function () {
         onLeave: function (index, nextIndex, direction) {
             var leavingSection = $(this);
 
-            //after leaving section 2
+            // after leaving section 1 animate elements for slide 2
             if (index == 1 && direction == 'down') {
-                var loadedSection = $(this);
-                console.log("Cool");
-                var projectDescription = document.querySelectorAll('.film_project_completed');
-                console.log(projectDescription)
-                Array.prototype.forEach.call(projectDescription, function (elements, index) {
-                    (function (index) {
-                        setTimeout(function () {
-                            $(elements).addClass('fade_in_animation');
-                        }, index * 200);
-                    })(index);
-                });
-
+                console.log('going to section 2');
+                let animation_selections = document.querySelectorAll('.completed_section_animations');
+                let animation_class_name = 'animation_trigger_completed_section';
+                animations(animation_selections, animation_class_name)
             }
 
             else if (index == 2 && direction == 'up') {
@@ -96,13 +88,7 @@ $(document).ready(function () {
                 console.log("Going to section 3!");
                 console.log(index);
                 var projectDescription = document.querySelectorAll('.film_project');
-                Array.prototype.forEach.call(projectDescription, function (elements, index) {
-                    (function (index) {
-                        setTimeout(function () {
-                            $(elements).addClass('fade_in_animation');
-                        }, index * 200);
-                    })(index);
-                });
+                
             }
             else if (index == 3 && direction == 'up') {
                 console.log("Going to section 2!");
@@ -122,6 +108,17 @@ $(document).ready(function () {
 
     }
     // Fade out load screen
+    function animations (elements_input, animation_class_name){
+        let elements_to_animate = elements_input;
+        Array.prototype.forEach.call(elements_to_animate, function (elements, index) {
+            (function (index) {
+                setTimeout(function () {
+                    $(elements).addClass(animation_class_name);
+                    console.log(elements);
+                }, index * 200);
+            })(index);
+        });
+    }
     $("#loadScreen").fadeOut(3000);
 });
 

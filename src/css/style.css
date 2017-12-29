@@ -71,7 +71,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    position: relative;
 }
 
 #fp-nav ul li a span{
@@ -119,20 +119,16 @@
     display: -webkit-inline-flex; 
     display: inline-flex;
     -webkit-flex-direction: column;
+    -moz-flex-direction: column;
     flex-direction: column;
-    justify-content: center;
+    -moz-justify-content: center;
     -webkit-justify-content: center;
+    justify-content: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 
-}
-.film_project_completed{
-    width: 350px;
-    margin: 15px;
-    height: 350px;
-    padding: 15px;
-    position: relative;
-    opacity: 0;
-    color: white;
-}
 
 .film_project{
     width: 350px;
@@ -293,7 +289,6 @@
     }
 }
 
-/* Firefox < 16 */
 @-moz-keyframes fadein {
     from {
         opacity: 0;
@@ -355,22 +350,81 @@
 }
 
 span:nth-child(1){
-    font-size: 5em;
-    display: block;
-    right: 25%;
+    display: flex;
+    font-size: 6em;
     position: relative;
     font-family: 'Archivo Black', sans-serif;
     text-align: center;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    left: 5%;
 }
 
 span:nth-child(2){
-    font-size: 2.5em;
+    display: flex;
+    font-size: 3.5em;
     position: relative;
     font-family: 'Archivo Black', sans-serif;
     text-align: center;
     color: white;
-    right: 15%;
+    left: 42%;
+    -webkit-animation: pop_in 1.5s forwards; 
+    -moz-animation: pop_in 1.5s forwards; 
+    animation: pop_in 1.5s forwards;
+}
+
+#title_container_film_completed{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-animation: pop_in 1.5s forwards; 
+    -moz-animation: pop_in 1.5s forwards; 
+    animation: pop_in 1.5s forwards;
+}
+
+#film_project_completed{
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    color: white;
+    height: 550px;
+    display: -webkit-flex;
+    display: flex;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    
+}
+
+.animation_trigger_completed_section{
+    -webkit-animation: pop_in 2.5s forwards; 
+    -moz-animation: pop_in 2.5s forwards; 
+    animation: pop_in 2.5s forwards;
+}
+
+#film_project_completed h2{
+    font-size: 3em;
+    position: relative;
+    -webkit-animation: pop_in 2.5s forwards; 
+    -moz-animation: pop_in 2.5s forwards; 
+    animation: pop_in 2.5s forwards;
+}
+#film_project_completed h3{
+    font-size: 2.5em;
+    position: relative;
+    -webkit-animation: pop_in 2s forwards; 
+    -moz-animation: pop_in 2s forwards; 
+    animation: pop_in 2s forwards;
+}
+#film_project_completed p{
+    font-size: 2em;
+    position: relative;
+    width: 500px;
+    text-align: left;
 }
 
 .title{
