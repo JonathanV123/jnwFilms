@@ -4,10 +4,10 @@ $(document).ready(function () {
         //Navigation
         menu: '#myMenu',
         lockAnchors: false,
-        anchors: ['firstPage', 'secondPage', 'thirdpage', 'fourthPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdpage', 'fourthPage','fifthPage'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Welcome', 'Film', 'Film', 'Television', 'Contact Me'],
+        navigationTooltips: ['Welcome','About', 'Film', 'Film', 'Television', 'Contact Me'],
         showActiveTooltip: true,
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
@@ -71,26 +71,33 @@ $(document).ready(function () {
         onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) { },
         onLeave: function (index, nextIndex, direction) {
             var leavingSection = $(this);
-
-            // after leaving section 1 animate elements for slide 2
+            // after leaving section 1 animate elements for slide 1
             if (index == 1 && direction == 'down') {
                 console.log('going to section 2');
-                let animation_selections = document.querySelectorAll('.completed_section_animations');
-                let animation_class_name = 'animation_trigger_completed_section';
-                animations(animation_selections, animation_class_name)
-                $('#film_project_completed p').addClass('pop_in_bottom');
+            
             }
-            else if (index == 2 && direction == 'down') {
+            // after leaving section 2 animate elements for slide 3
+            if (index == 2 && direction == 'down') {
+                console.log('going to section 2');
+                let animation_selections = document.querySelectorAll('.completed_section_animations');
+                let animation_class_name = 'animation_trigger_left_to_right';
+                animations(animation_selections, animation_class_name)
+                $('#film_project_completed p').addClass('animate_from_bottom');
+            }
+            // after leaving section 3 animate elements for slide 4
+            else if (index == 3 && direction == 'down') {
                 let animation_selections = document.querySelectorAll('.film_project');
                 let animation_class_name = 'fade_in_animation';
-                animations(animation_selections, animation_class_name)                
+                $('.section_header_font').addClass('animate_from_top')
+                animations(animation_selections, animation_class_name)
             }
-            else if (index == 2 && direction == 'up') {
-                console.log("Going to section 1!");
-                console.log(index);
+            // after leaving section 4 animate elements for slide 5
+            else if (index == 4 && direction == 'down') {
+                $('#television_container').addClass('animate_from_bottom');
+                $('.section_header_font_small').addClass('animate_from_top');
 
             }
-            else if (index == 3 && direction == 'up') {
+            else if (index == 5 && direction == 'up') {
                 console.log("Going to section 2!");
                 console.log(index);
             }
@@ -104,11 +111,11 @@ $(document).ready(function () {
         }
 
     });
-    function animate_fade_in(){
+    function animate_fade_in() {
 
     }
     // Fade out load screen
-    function animations (elements_input, animation_class_name){
+    function animations(elements_input, animation_class_name) {
         let elements_to_animate = elements_input;
         Array.prototype.forEach.call(elements_to_animate, function (elements, index) {
             (function (index) {

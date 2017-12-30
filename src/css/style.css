@@ -1,3 +1,17 @@
+.flex_center{
+    display: -webkit-inline-flex; 
+    display: inline-flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
 #landing_section {
     background-image: url("../../assets/images/pexels-photo-672914.jpeg");
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url("../../assets/images/pexels-photo-672914.jpeg");
@@ -52,7 +66,25 @@
 }
 
 .television_project{
-    font-size: 1.3em;
+    margin: 20px;
+}
+
+.television_project h2{
+    font-size: 2em;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.television_project h3{
+    color: white;
+}
+
+.television_project p{
+    font-size: 1.4em;
+    text-align: left;
+    font-family: Georgia, Times, serif;
+    color: white;
 }
 
 #loadScreen{
@@ -81,32 +113,38 @@
 }
 
 #fp-nav ul li .fp-tooltip{
-    font-family: 'Roboto Condensed', sans-serif;    
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .fp-tooltip{
     margin-right: 10px;
 }
 
+.animate_from_top{
+    -webkit-animation: top_to_bottom_animation 1.2s forwards; 
+    -moz-animation: top_to_bottom_animation 1.2s forwards;
+    animation: top_to_bottom_animation 1.2s forwards;
+} 
+
 #fp-nav.right {
     border: 2px solid white;
-    -webkit-animation: nav_pop_in 2s forwards; 
-    -moz-animation: nav_pop_in 2s forwards;
-    animation: nav_pop_in 2s forwards;
+    -webkit-animation: top_to_bottom_animation 2s forwards; 
+    -moz-animation: top_to_bottom_animation 2s forwards;
+    animation: top_to_bottom_animation 2s forwards;
 }
 
 #landing_content_container h1{
     font-size: 8em;
     color: #e1382d;  
-    -webkit-animation: pop_in 1.5s forwards; 
-    -moz-animation: pop_in 1.5s forwards; 
-    animation: pop_in 1.5s forwards;
+    -webkit-animation: left_to_right_animation 1.5s forwards; 
+    -moz-animation: left_to_right_animation 1.5s forwards; 
+    animation: left_to_right_animation 1.5s forwards;
 }
 
 #landing_content_container h2{
-    -webkit-animation: pop_in 2s forwards; 
-    -moz-animation: pop_in 2s forwards; 
-    animation: pop_in 2s forwards;
+    -webkit-animation: left_to_right_animation 2s forwards; 
+    -moz-animation: left_to_right_animation 2s forwards; 
+    animation: left_to_right_animation 2s forwards;
     color: white;
     font-weight: 500;
     font-size: 1.8em;
@@ -114,25 +152,13 @@
 
 #landing_content_container p{
     color: white;  
-    -webkit-animation: pop_in 2.5s forwards; 
-    -moz-animation: pop_in 2.5s forwards; 
-    animation: pop_in 2.5s forwards;
+    -webkit-animation: left_to_right_animation 2.5s forwards; 
+    -moz-animation: left_to_right_animation 2.5s forwards; 
+    animation: left_to_right_animation 2.5s forwards;
     font-family: Georgia, Times, serif;
 }
 
-.flex_center{
-    display: -webkit-inline-flex; 
-    display: inline-flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
+
 
 
 .film_project{
@@ -151,6 +177,14 @@
 
 #television_container{
     width: 70%;
+    -moz-flex-direction: initial;
+    -ms-flex-direction: initial;
+    -webkit-flex-direction: initial;
+    flex-direction: initial;
+    /* -moz-flex-wrap: wrap;    
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .section_header_font{
@@ -196,7 +230,7 @@
     margin: 0;
 }
 
-span:nth-child(1){
+#completed_text{
     display: flex;
     font-size: 6em;
     color: #e1382d;
@@ -204,9 +238,10 @@ span:nth-child(1){
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     text-align: center;
     left: 5%;
+    opacity: 0;
 }
 
-span:nth-child(2){
+#film_completed_text{
     display: flex;
     font-size: 3.5em;
     color: #e1382d;
@@ -214,6 +249,7 @@ span:nth-child(2){
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     text-align: center;
     left: 22%;
+    opacity: 0;
 }
 
 #title_container_film_completed{
@@ -242,10 +278,10 @@ span:nth-child(2){
     flex-direction: column;
 }
 
-.animation_trigger_completed_section{
-    -webkit-animation: pop_in 2.5s forwards; 
-    -moz-animation: pop_in 2.5s forwards; 
-    animation: pop_in 2.5s forwards;
+.animation_trigger_left_to_right{
+    -webkit-animation: left_to_right_animation 1.5s forwards; 
+    -moz-animation: left_to_right_animation 1.5s forwards; 
+    animation: left_to_right_animation 1.5s forwards;
 }
 
 #film_project_completed h2{
@@ -291,13 +327,13 @@ hr{
     font-size: 1.3em;
 }
 
-.pop_in_bottom{
-    -webkit-animation: pop_in_bottom 2.5s forwards; 
-    -moz-animation: pop_in_bottom 2.5s forwards; 
-    animation: pop_in_bottom 2.5s forwards;
+.animate_from_bottom{
+    -webkit-animation: animate_from_bottom 2s forwards; 
+    -moz-animation: animate_from_bottom 2s forwards; 
+    animation: animate_from_bottom 2s forwards;
 }
 
-@keyframes nav_pop_in {
+@keyframes top_to_bottom_animation {
     from { 
         opacity: 0;
         -ms-transform:  translateY(-800px);
@@ -316,7 +352,7 @@ hr{
     }
 }
 
-@-moz-keyframes nav_pop_in {
+@-moz-keyframes top_to_bottom_animation {
     from { 
         opacity: 0;
         -ms-transform:  translateY(-800px);
@@ -336,7 +372,7 @@ hr{
 }
 
 
-@-webkit-keyframes nav_pop_in {
+@-webkit-keyframes top_to_bottom_animation {
     from { 
         opacity: 0;
         -ms-transform:  translateY(-800px);
@@ -355,7 +391,7 @@ hr{
     }
 }
 
-@keyframes pop_in_bottom {
+@keyframes animate_from_bottom {
     from { 
         opacity: 0;
         -ms-transform:  translateY(800px);
@@ -374,7 +410,7 @@ hr{
     }
 }
 
-@-moz-keyframes pop_in_bottom {
+@-moz-keyframes animate_from_bottom {
     from { 
         opacity: 0;
         -ms-transform:  translateY(800px);
@@ -394,7 +430,7 @@ hr{
 }
 
 
-@-webkit-keyframes pop_in_bottom {
+@-webkit-keyframes animate_from_bottom {
     from { 
         opacity: 0;
         -ms-transform:  translateY(800px);
@@ -413,7 +449,7 @@ hr{
     }
 }
 
-@keyframes pop_in {
+@keyframes left_to_right_animation {
     from { 
         opacity: 0;
         -ms-transform:  translateX(-800px);
@@ -432,7 +468,7 @@ hr{
     }
 }
 
-@-moz-keyframes pop_in {
+@-moz-keyframes left_to_right_animation {
     from { 
         opacity: 0;
         -ms-transform:  translateY(-800px);
@@ -452,7 +488,7 @@ hr{
 }
 
 
-@-webkit-keyframes pop_in {
+@-webkit-keyframes left_to_right_animation {
     from { 
         opacity: 0;
         -ms-transform:  translateY(-800px);
