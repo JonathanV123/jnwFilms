@@ -4,10 +4,10 @@ $(document).ready(function () {
         //Navigation
         menu: '#myMenu',
         lockAnchors: false,
-        anchors: ['firstPage', 'secondPage', 'thirdpage', 'fourthPage','fifthPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdpage', 'fourthPage', 'fifthPage'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Welcome','About', 'Film', 'Film', 'Television', 'Contact Me'],
+        navigationTooltips: ['Welcome', 'About', 'Film', 'Film', 'Television', 'Contact Me'],
         showActiveTooltip: true,
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
@@ -56,7 +56,11 @@ $(document).ready(function () {
         responsiveHeight: 0,
         responsiveSlides: false,
         parallax: false,
-        parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
+        parallaxOptions: {
+            type: 'reveal',
+            percentage: 62,
+            property: 'translate'
+        },
 
         //Custom selectors
         sectionSelector: '.section',
@@ -64,21 +68,24 @@ $(document).ready(function () {
         lazyLoading: true,
 
         //events
-        afterRender: function () { },
-        afterResize: function () { },
-        afterResponsive: function (isResponsive) { },
-        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) { },
-        onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) { },
+        afterRender: function () {},
+        afterResize: function () {},
+        afterResponsive: function (isResponsive) {},
+        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {},
+        onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {},
         onLeave: function (index, nextIndex, direction) {
             var leavingSection = $(this);
-            // after leaving section 1 animate elements for slide 1
+            // after leaving section 1 animate elements for slide 2
             if (index == 1 && direction == 'down') {
-                console.log('going to section 2');
-            
+                $('#jnw').addClass("animate_from_top");
+                $('#aboutDesc').addClass("animate_from_top");
+                $('.link').addClass("animate_from_bottom");
+                $('.title').addClass("animate_from_top");
+                $('.linkNoDecoration').addClass("animate_from_bottom");
             }
             // after leaving section 2 animate elements for slide 3
             if (index == 2 && direction == 'down') {
-                console.log('going to section 2');
+                console.log('going to section 3');
                 let animation_selections = document.querySelectorAll('.completed_section_animations');
                 let animation_class_name = 'animation_trigger_left_to_right';
                 animations(animation_selections, animation_class_name)
@@ -96,11 +103,7 @@ $(document).ready(function () {
                 $('#television_container').addClass('animate_from_bottom');
                 $('.section_header_font_small').addClass('animate_from_top');
 
-            }
-            else if (index == 5 && direction == 'up') {
-                console.log("Going to section 2!");
-                console.log(index);
-            }
+            } 
         },
         afterLoad: function (anchorLink, index) {
             var loadedSection = $(this);
@@ -111,6 +114,7 @@ $(document).ready(function () {
         }
 
     });
+
     function animate_fade_in() {
 
     }
@@ -127,4 +131,3 @@ $(document).ready(function () {
     }
     $("#loadScreen").fadeOut(3000);
 });
-
